@@ -1,0 +1,138 @@
+#schedule {
+  width: 75vw;
+  height: 94vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#schedule .container {
+  box-sizing: border-box;
+  margin-top: 3%;
+  width: 100%;
+}
+
+#schedule .option {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  width: 70px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+#schedule .option span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#schedule .option ul {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  text-align: center;
+  background-color: #fff;
+}
+
+#schedule .option ul {
+  position: absolute;
+  max-height: 0;
+  overflow-x: scroll;
+}
+
+#schedule .option ul::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera*/
+}
+
+#schedule .option ul.show {
+  max-height: 200px;
+}
+
+#schedule .calendar-console {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 50px;
+}
+
+#schedule .calendar-console button {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+#schedule .calendar-console button:hover {
+  background-color: #dbdbdb;
+}
+
+#schedule .dateArea {
+  width: 100%;
+}
+
+#schedule .dateArea .dateList{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#schedule .dateArea .dateList > li {
+  width: calc(100%/7);
+  height: calc(65vh/5);
+  box-sizing: border-box;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+#schedule .dateArea .dateList > li:nth-child(7n),
+#schedule .dateArea .dateList > li:last-child {
+  border-right: 1px solid #000; 
+}
+
+#schedule .dateArea .dateList li.day {
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  border-top: 1px solid #000;
+}
+
+#schedule .dateArea .dateList li .dateWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+#schedule .dateArea .dateList li span {
+  box-sizing: border-box;
+  padding: 0 3%;
+  line-height: 20px;
+  font-size: 16px
+}
+
+#schedule .dateArea .dateList li .link {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#schedule .dateArea .dateList li .link:hover {
+  background-color: #dbdbdb;
+}
+
+#schedule .dateArea .dateList li .missionList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+#schedule .dateArea .dateList li .missionList li {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 0 5px;
+  font-size: 14px;
+  text-overflow: ellipsis;
+}

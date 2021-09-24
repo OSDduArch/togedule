@@ -1,0 +1,103 @@
+#todo {
+  height: 94vh;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo h2 {
+  font-size: 60px;
+}
+
+#todo form {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 8%;
+}
+
+#todo form input {
+  width: 100%;
+  line-height: 50px;
+  border: none;
+  border-bottom: 2px solid #000;
+  text-align: center;
+  font-size: 30px;
+  box-sizing: border-box;
+  padding: 0 8%;
+  transition: all .4s ease;
+}
+
+#todo form input:focus {
+  outline: none;
+}
+
+#todo form input::placeholder{
+  transition: opacity .2s ease;
+}
+
+#todo form input.center::placeholder {
+  opacity:0;
+}
+
+#todo .todoList {
+  min-width: 300px;
+  min-height: 20vh;
+  max-height: 45vh;
+  padding: 0 8%;
+  width: 70%;
+  overflow-y: scroll;
+}
+
+#todo .todoList::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera*/
+}
+
+#todo .todoList ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-radius: 10px;
+}
+
+#todo .todoList ul li.done {
+  background-color: rgba(0,0,0, .1) !important;
+}
+
+#todo .todoList ul li.done span{ 
+  text-decoration: line-through;
+  color: rgba(0,0,0, .6);
+}
+
+#todo .todoList ul li span {
+  display: inline-block;
+  /* width: 90%; */
+  font-size: 20px;
+  word-break: break-all;
+}
+
+#todo .todoList ul li .handleTodo {
+  /* width: 10%; */
+  padding: 0 5px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 10px;
+}
+
+#todo .todoList ul li input {
+  /* width: 5%; */
+}
+
+#todo .todoList ul li button {
+  cursor: pointer;
+  width: 5%;
+  font-size: 18px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
